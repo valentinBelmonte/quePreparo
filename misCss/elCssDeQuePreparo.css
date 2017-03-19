@@ -1,0 +1,124 @@
+.cb-slideshow,
+
+.cb-slideshow:after 
+{ 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+
+/*aca abajo estan las posiciones iniciales de las fotografias*/
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+
+/* Aca si  ocurren las trancisiones */
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(imagenes\posiblesFondo\listas\29833195044_0e5504dbd9_b.jpg) 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(imagenes\posiblesFondo\listas\cheesyMapleBaconCajunPulledPorkSandwichHR.jpg);
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(imagenes\posiblesFondo\listas\food.jpg);
+    animation-delay: 12s; 
+}
+
+
+.cb-slideshow li:nth-child(2) div { 
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+    animation-delay: 12s; 
+}
+
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+/* ACA EMPIEZA EL TEMITA BOTON HEXAGONAL*/
+
+#hexagon {
+	width: 100px;
+	height: 55px;
+	background: red;
+	position: relative;
+}
+#hexagon:before {
+	content: "lorem ipum";
+	position: absolute;
+	top: -25;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid red;
+}
+#hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid red;
+}
+/*ACA TERMINO EL BOTON HEXAGONAL*/
+
+/* ACA EMPIEZA LA PRUEBA DE HACERLOS BOTONES Y CARROUSEL */
+.hover-slide {
+    position: absolute;
+    /*margin-left: 30%;*/
+    z-index: 10;
+}
+
+
+.carousel .item {
+    width: 100%;
+    height: 100%;
+ }
+
+.carousel .item img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn.start-me {margin: 0 auto;}
+
+/* ACA TERMINA LA PRUEBA DE BOTONES Y CARROUSEL*/
+
+.centered {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 500px;
+    height: 200px;
+    background: black;
+}

@@ -1,0 +1,26 @@
+/* ACA VAN LOS COLORES SOBRE FONDO DE LAS SECCIONES*/
+#almacen
+{
+background-color:rgba(76,185,68,0.3);
+}
+.Lacteos
+{
+background-color:rgba(76,185,68,0.3);
+}
+.Carnes
+{
+background-color:rgba(76,185,68,0.3);
+}
+.Lacteos
+{
+background-color:rgba(15,79,171,0.3);
+}
+
+
+/* ACA VA LA IMAGEN DE FONDO Y EL COLOR SI ESTA SE ACHICA*/
+body {
+    background-image: url("file:///C:/Users/Valentin/Desktop/PROGRAMACION/ComIT/quePreparo/imagenes/posiblesFondo/listas/elmejorfondo_opt.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-color: rgba(130,130,130,0.8)
+}
