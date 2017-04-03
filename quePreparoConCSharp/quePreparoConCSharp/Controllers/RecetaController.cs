@@ -219,7 +219,10 @@ namespace quePreparoConCSharp.Controllers
 
             /*SE CREA UN MANAGER PARA MANEJAR LA CONSULTA*/
 
-            MiManager Mimanager = new MiManager();
+            MiManager manager = new MiManager();
+
+            List<Receta> listaRecetas = manager.BuscarRecetas(listaIng);
+            ViewBag.Recetas = listaRecetas;
 
             return RedirectToAction("Resultado", "Receta");
 

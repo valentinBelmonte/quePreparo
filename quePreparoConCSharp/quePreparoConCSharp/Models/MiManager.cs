@@ -9,10 +9,10 @@ namespace quePreparoConCSharp.Models
 {//CON ESTE MANAGER VOY A MANEJAR LAS RECETAS
     public class MiManager
     {
-        public Mostrar Reseta (listaIng)
+        public List<Receta> BuscarRecetas(List <int>listaIng)
 
         {
-            Receta receta = new Receta();
+            List<Receta> recetas = new List<Receta>();
 
             //BUSCO CONECTARME A LA BBDD
             SqlConnection conexion = new SqlConnection(ConfigurationManager.AppSettings["conexionBaseDeDatos"]);
@@ -21,12 +21,14 @@ namespace quePreparoConCSharp.Models
             //CREO COMANDO PARA PODER CONSULTAR LA BBDD
             SqlCommand sentencia = conexion.CreateCommand();
             //LE DOY LOS PARAMETROS DE BUSCA A LA SENTENCIA
-            sentencia.CommandText = "SELECT id_receta FROM ingredientes_receta WHERE Id = @Id";
-            sentencia.Parameters.AddWithValue("@Id", ID);
+            sentencia.CommandText = "SELECT id_receta FROM ingredientes_receta INNER JOIN receta ON (ingredientes_receta.id_receta = receta.id) WHERE id_ingrediente IN(List <int>listaIng)" ;
+            sentencia.Parameters.AddWithValue("@id", 0);
+          
             //EJECUTO LA CONSULTA
             SqlDataReader reader = sentencia.ExecuteReader();
             if (reader.Read()) //SI HAY ALGO PARA LEER LO VA A LEER, SINO NO
             {
+                Receta receta = new Receta();
                 //COMPLETO LOS DATOS                 
                 receta.Titulo = reader["Titulo"].ToString();
                 receta.Texto = (string)reader["Texto"];
@@ -38,13 +40,11 @@ namespace quePreparoConCSharp.Models
             //CERRAR LA CONEXION AL TERMINAR!!!!
             conexion.Close();
 
-            return receta;
+            return recetas;
         }
+    
 
 
-
-            viewbag = Receta;
-
-           return View("Resultado", "Receta");
+          
     }
 }
