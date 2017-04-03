@@ -21,11 +21,12 @@ namespace quePreparoConCSharp.Models
             //CREO COMANDO PARA PODER CONSULTAR LA BBDD
             SqlCommand sentencia = conexion.CreateCommand();
             //LE DOY LOS PARAMETROS DE BUSCA A LA SENTENCIA
-            sentencia.CommandText = "SELECT id_receta FROM ingredientes_receta INNER JOIN receta ON (ingredientes_receta.id_receta = receta.id) WHERE id_ingrediente IN(List <int>listaIng)" ;
-            sentencia.Parameters.AddWithValue("@id", 0);
-          
-            //EJECUTO LA CONSULTA
-            SqlDataReader reader = sentencia.ExecuteReader();
+            sentencia.CommandText = "SELECT id_receta FROM ingredientes_receta INNER JOIN receta ON (ingredientes_receta.id_receta = receta.id) WHERE id_ingrediente IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,23,22,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43)";
+
+            //sentencia.CommandText += "5,)";
+            
+              //EJECUTO LA CONSULTA
+              SqlDataReader reader = sentencia.ExecuteReader();
             if (reader.Read()) //SI HAY ALGO PARA LEER LO VA A LEER, SINO NO
             {
                 Receta receta = new Receta();
