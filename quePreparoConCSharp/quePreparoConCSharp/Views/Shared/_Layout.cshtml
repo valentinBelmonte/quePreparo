@@ -9,8 +9,9 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-@* arranca el body poniendo la imagen de fondo *@
+@* EL BODY ARRANCA METIENDO UNA IMAGEN DE FONDO *@
 <body background="~/misImagenes/elmejorfondo_opt.jpg">
+    @*ACA ARRANCA EL NAVBAR*@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,6 +22,7 @@
                 </button>
                 @Html.ActionLink("Que Preparo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+            @*ACA VAN LOS VIEWS Y CONTROLES QUE VA A USAR EL NAVBAR PARA HACERME NAVEGAR*@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Mi Heladera", "MiHeladera", "Home")</li>

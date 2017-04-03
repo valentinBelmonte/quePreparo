@@ -8,6 +8,8 @@ namespace quePreparoConCSharp.Controllers
 {
     public class HomeController : Controller
     {
+        //ACA ESTAN TODOS LOS CONTROLERS PARA ENTREGAR VISTAS
+        //LAS DE LOS BOTONES DEL NAVBAR
         public ActionResult Index()
         {
             return View();

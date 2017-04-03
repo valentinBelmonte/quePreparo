@@ -4,7 +4,7 @@
     
 }
 
-/* Set padding to keep content from hitting the edges */
+/* SETEO EL PADDING PARA EVITAR QUE TODO TOQUE EL BORDE */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -17,27 +17,52 @@
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
+/* SETEO ANCHO MAXIMO DE ELEMENTS DE INPUT */
 input,
 select,
 textarea {
     max-width: 280px;
 }
 
-/*para bajar los botones del home*/
+/*ACA BAJO LAS DESCRIPCIONES DEL HOME INDEX*/
 .body-content {
     padding-top: 100px;
 }
 
-/*colores de fondo de los 3 div de descripcion*/
+/*ESTOS SON LOS PARAMETROS DE CSS DE  LOS  CUADROS DE LA VIEW HOME INDEX*/
+
+#amarillo
+{
+    background-color: rgba(255,231,87,0.7);
+    border-radius: 25px;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+    color: rgb(80,80,80);
+} 
+
+
+#azul
+{
+    background-color: rgba(43,65,98,0.7);
+    border-radius: 25px;
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+    color: rgb(200,200,200);
+}
+
+
 #verde 
 {
     background-color: rgba(195,255,107,0.8);
     border-radius: 25px;
     text-align: center;
-    
+    padding: 15px 15px 15px 15px;
+    color: rgb(80,80,80);
 }
-/*PREGUNTAR A JUAN POR QUE PASA LO QUE PASA CUANDO SACO EL .COL-SM-3*/
+
+
+
+/*ESTOS SON LOS PARAMETROS DE CSS PARA LAS COSAS DE LA VIEW MI HELADERA*/
 #azul2 .col-sm-3
 {
     background-color: rgba(43,65,98,0.7);
